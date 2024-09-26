@@ -1,5 +1,5 @@
 # test_some_module.py
-from some_module import add, subtract
+from ..some_module import add, subtract
 
 def test_add():
     assert add(1, 2) == 3  # 测试了 add 函数
