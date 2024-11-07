@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Running tests on branch: ${env.BRANCH_NAME}"
+                sh 'pytest --maxfail=1 --disable-warnings --cov=src src/tests/ --html=report.html'
                 // 执行测试指令，例如 `pytest --maxfail=1 --disable-warnings --cov=.`
             }
         }
