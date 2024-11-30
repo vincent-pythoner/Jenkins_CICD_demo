@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # 安装依赖
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt --timeout 100 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # 设置默认命令（如果需要）
 CMD ["bash"]
