@@ -1,7 +1,5 @@
 # 基于 Python 3.9 slim 镜像
-#FROM python:3.9-slim
-#FROM 6a22698eab0e
-FROM 38f145e5028f
+FROM python:3.9-slim
 
 # 设置工作目录
 WORKDIR /app
@@ -10,8 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # 安装依赖
-# TODO
-# RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # 设置默认命令（如果需要）
 CMD ["bash"]
